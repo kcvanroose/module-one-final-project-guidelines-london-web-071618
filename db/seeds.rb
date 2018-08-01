@@ -1,39 +1,39 @@
 require 'pry'
 
-
-#PLAYERS
-sarah = Player.create(name: 'Sarah')
-#support
-casey = Player.create(name: 'Casey')
-#damage #support
-maduri = Player.create(name: 'Maduri')
-#tank
-luoana = Player.create(name: 'Luoana')
-#support
-jo = Player.create(name: 'Jo')
-#damage
-ritz = Player.create(name: 'Ritz')
-#tank
-ramona = Player.create(name: 'Ramona')
-#support #damage
-adham = Player.create(name: 'Adham')
-#damage
-karla = Player.create(name: 'Karla')
-#tank #support
-ali = Player.create(name: 'Ali')
-#support
-brooke = Player.create(name: 'Brooke')
-#damage
-dan = Player.create(name: 'Dan')
-#tank #damage
-niky = Player.create(name: 'Niky')
-#support
-oliver = Player.create(name: 'Oliver')
-#damage
-bhav = Player.create(name: 'Bhav')
-#tank #support #damage
-ryan = Player.create(name: 'Ryan')
-#support
+#
+# #PLAYERS
+# sarah = Player.create(name: 'Sarah')
+# #support
+# casey = Player.create(name: 'Casey')
+# #damage #support
+# maduri = Player.create(name: 'Maduri')
+# #tank
+# luoana = Player.create(name: 'Luoana')
+# #support
+# jo = Player.create(name: 'Jo')
+# #damage
+# ritz = Player.create(name: 'Ritz')
+# #tank
+# ramona = Player.create(name: 'Ramona')
+# #support #damage
+# adham = Player.create(name: 'Adham')
+# #damage
+# karla = Player.create(name: 'Karla')
+# #tank #support
+# ali = Player.create(name: 'Ali')
+# #support
+# brooke = Player.create(name: 'Brooke')
+# #damage
+# dan = Player.create(name: 'Dan')
+# #tank #damage
+# niky = Player.create(name: 'Niky')
+# #support
+# oliver = Player.create(name: 'Oliver')
+# #damage
+# bhav = Player.create(name: 'Bhav')
+# #tank #support #damage
+# ryan = Player.create(name: 'Ryan')
+# #support
 
 
 
@@ -267,8 +267,47 @@ ryan = Player.create(name: 'Ryan')
     # counter += 1
     # end
 
+    #
+    # create_table :games do |t|
+    #   t.integer :player_id
+    #   t.integer :character_id
+    #   t.boolean :win?
+    #   t.string :map
 
 
+# Hanamura
+# HOllywood
+# Ilios
+# Eichewalde
+# Kings Row
+# Lijang Tower
+# Route 66
+# Numbani
+# Nepas
+#
+# character - 97 - 120
+# player - 81 - 96
 
 
-#GAMES
+# GAMES
+Game.create(player_id: 81, character_id: 103, win?: "false", map: "Dorado")
+Game.create(player_id: 88, character_id: 100, win?: "false", map: "Ilios")
+Game.create(player_id: 83, character_id: 111, win?: "win", map: "Numbani")
+Game.create(player_id: 90, character_id: 97, win?: "win", map: "Nepal")
+Game.create(player_id: 91, character_id: 98, win?: "win", map: "Route_66")
+Game.create(player_id: 85, character_id: 102, win?: "false", map: "Lijang_Tower")
+Game.create(player_id: 96, character_id: 104, win?: "win", map: "Kings_Row")
+Game.create(player_id: 82, character_id: 114, win?: "false", map: "Hollywood")
+Game.create(player_id: 93, character_id: 115, win?: "win", map: "Hanamura")
+Game.create(player_id: 89, character_id: 110, win?: "false", map: "Dorado")
+Game.create(player_id: 83, character_id: 111, win?: "false", map: "Dorado")
+Game.create(player_id: 90, character_id: 112, win?: "false", map: "Route_66")
+Game.create(player_id: 91, character_id: 113, win?: "true", map: "Numbani")
+Game.create(player_id: 95, character_id: 114, win?: "true", map: "Nepal")
+Game.create(player_id: 85, character_id: 115, win?: "false", map: "Ilios")
+Game.create(player_id: 88, character_id: 116, win?: "false", map: "Lijang_Tower")
+Game.create(player_id: 81, character_id: 118, win?: "true", map: "Dorado")
+Game.create(player_id: 82, character_id: 119, win?: "false", map: "Route_66")
+Game.create(player_id: 83, character_id: 120, win?: "false", map: "Ilios")
+Game.create(player_id: 84, character_id: 121, win?: "true", map: "Ilios")
+Game.create(player_id: 83, character_id: 121, win?: "true", map: "Numbani")
