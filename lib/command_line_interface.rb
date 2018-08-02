@@ -61,12 +61,16 @@ def find_name_from_player_id(player_id)
 end
 
 def save_team_member(player)
-  puts "#{player} has played this character. Would you like to add them to your team?"
+  puts "#{player} has played this character. Would you like to add them to your team? 'y' or 'n'"
   return gets.chomp
 end
 
-
-
+def add_team_loop(player_choice, character)
+  if player_choice == "y"
+    @@team << character
+    puts @@team.count
+  end
+end
 
 
 

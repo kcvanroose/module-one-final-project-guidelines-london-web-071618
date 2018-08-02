@@ -31,7 +31,10 @@ player = find_characters_player_id(character_instance.id)
 
 player_who_has_character = find_name_from_player_id(player)
 
-save_team_member(player_who_has_character)
+choice = save_team_member(player_who_has_character)
+
+add_team_loop(choice, character_instance)
+
 
 end
 # ask if they want to save
