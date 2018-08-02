@@ -7,8 +7,16 @@ require 'pry'
 
 welcome
 
-user_choice = get_character_from_user
+preference = " "
 
-user_preference = get_preference
+character = get_character_from_user
 
-character_information(user_choice, user_preference)
+until preference == "yes"
+
+preference = get_preference
+
+character_instance = find_character(character)
+
+character_information(character_instance, preference)
+
+end
