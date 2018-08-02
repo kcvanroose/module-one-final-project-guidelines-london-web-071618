@@ -20,3 +20,18 @@ character_instance = find_character(character)
 character_information(character_instance, preference)
 
 end
+
+until @@team.count == 2
+
+requested_character = find_other_characters_for_team
+
+character_instance = find_character(requested_character)
+
+player = find_characters_player_id(character_instance.id)
+
+player_who_has_character = find_name_from_player_id(player)
+
+save_team_member(player_who_has_character)
+
+end
+# ask if they want to save
