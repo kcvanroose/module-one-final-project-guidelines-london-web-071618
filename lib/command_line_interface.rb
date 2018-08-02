@@ -51,8 +51,8 @@ def character_information(character, pref, team)
   end
 end
 
-def find_other_characters_for_team
-  puts "You have #{@@team.count} in your team. To add more players choose a character to complement your team.
+def find_other_characters_for_team(team_list)
+  puts "You have #{team_list.count} in your team. To add more players choose a character to complement your team.
   'Ana', 'Bastion','D.Va', 'Genji', 'Junkrat', 'Hanzo', 'Lucio', 'McCree', 'Mei', 'Mercy', 'Pharah', 'Reaper', 'Reaper', 'Roadhog', 'Soldier: 76', 'Sombra', 'Symmetra', 'Torbjorn', 'Tracer', 'Widowmaker', 'Winston', 'Zarya'."
   return gets.chomp
 end
@@ -72,15 +72,20 @@ def save_team_member(player)
   return gets.chomp
 end
 
-def team_makeup
-  @@team.map {|t| puts "character: #{t.name}, role: #{t.role}"}
+def team_makeup(finished_list)
+  finished_list.map {|t| puts "character: #{t.name}, role: #{t.role}"}
 end
 
-def add_team_loop(player_choice, character)
+def add_team_loop(player_choice, character, team_list_5)
   if player_choice == "y"
-    @@team << character
-    puts "you now have a full team. #{team_makeup}"
+    team_list_5 << character
+    puts "You now have a full team!"
+    team_makeup(team_list_5)
   end
+end
+
+def last_message
+  puts "Go kick some ass!"
 end
 
 
