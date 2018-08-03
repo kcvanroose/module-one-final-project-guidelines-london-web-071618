@@ -311,5 +311,12 @@ require 'pry'
 # Game.create(player_id: 83, character_id: 120, win?: "false", map: "Ilios")
 # Game.create(player_id: 84, character_id: 121, win?: "true", map: "Ilios")
 # Game.create(player_id: 83, character_id: 121, win?: "true", map: "Numbani")
+  Game .create(player_id: 83, character_id: 99, win?: "true", map: "Numbani")
+  Game .create(player_id: 88, character_id: 101, win?: "false", map: "Ilios")
+  Game .create(player_id: 94, character_id: 105, win?: "false", map: "Nepal")
+  Game .create(player_id: 93, character_id: 106, win?: "true", map: "Ilios")
+  Game .create(player_id: 85, character_id: 108, win?: "false", map: "Hollywood")
+  Game .create(player_id: 89, character_id: 117, win?: "true", map: "Route_66")
+
 
 #Team

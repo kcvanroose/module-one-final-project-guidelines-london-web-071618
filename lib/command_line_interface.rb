@@ -1,21 +1,28 @@
 
 
 def welcome
-  puts "Hello and welcome to Overwatch!
-Before we can start, we need you to decide which character you'd like to play as.
------------------------------------------"
+  puts "
+Hello and welcome to Overwatch!
 
+6 players are required for a full team. The current team is...
+ -----------------------------------------"
+ team_makeup(start_team)
+ puts "--------------------------------------------"
 end
 
 def get_character_from_user
-  puts "Please enter a character from this list:
-'Ana', 'Bastion','D.Va', 'Genji', 'Junkrat', 'Hanzo', 'Lucio', 'McCree', 'Mei', 'Mercy', 'Pharah', 'Reaper', 'Reaper', 'Roadhog', 'Soldier: 76', 'Symmetra', 'Torbjorn', 'Tracer', 'Widowmaker', 'Winston', 'Zarya'."
+  puts "
+Please choose a character to join the team:
+'Ana', 'Bastion','D.Va', 'Genji', 'Junkrat', 'Hanzo', 'Lucio', 'McCree', 'Mei', 'Mercy', 'Pharah', 'Reaper', 'Reaper', 'Roadhog', 'Soldier: 76', 'Symmetra', 'Torbjorn', 'Tracer', 'Widowmaker', 'Winston', 'Zarya'.
+---------------------------------------------"
   return gets.chomp
 end
 
 def get_preference
-  puts "what do you want to know?
-Type '1: description', '2: role', '3: difficulty,' or type 'yes' to choose this character or 'other' to choose another."
+  puts "
+Find out more info or type other to select another character.
+Type '1: description', '2: role', '3: difficulty,' or type 'yes' to choose this character or 'other' to choose another.
+---------------------------------------------"
   return gets.chomp
 end
 
@@ -37,13 +44,19 @@ end
 
 def character_information(character, pref, team)
   if pref == "1"
-    puts character.description
+    puts "Description:
+
+#{character.description}"
   elsif pref == "2"
-    puts character.role
+    puts "Role:
+#{character.role}"
   elsif pref == "3"
-    puts character.difficulty
+    puts "Difficulty:
+#{character.difficulty}"
   elsif pref == "yes"
-    puts "character saved"
+    puts "
+character saved
+----------------------------------------"
     saved_character = character
     team << saved_character
   elsif pref == "other"
@@ -53,7 +66,9 @@ end
 
 def find_other_characters_for_team(team_list)
   puts "You have #{team_list.count} in your team. To add more players choose a character to complement your team.
-  'Ana', 'Bastion','D.Va', 'Genji', 'Junkrat', 'Hanzo', 'Lucio', 'McCree', 'Mei', 'Mercy', 'Pharah', 'Reaper', 'Reaper', 'Roadhog', 'Soldier: 76', 'Sombra', 'Symmetra', 'Torbjorn', 'Tracer', 'Widowmaker', 'Winston', 'Zarya'."
+'Ana', 'Bastion','D.Va', 'Genji', 'Junkrat', 'Hanzo', 'Lucio', 'McCree', 'Mei', 'Mercy', 'Pharah', 'Reaper', 'Reaper', 'Roadhog', 'Soldier: 76', 'Sombra', 'Symmetra', 'Torbjorn', 'Tracer', 'Widowmaker', 'Winston', 'Zarya'.
+
+----------------------------------------"
   return gets.chomp
 end
 
@@ -73,19 +88,22 @@ def save_team_member(player)
 end
 
 def team_makeup(finished_list)
-  finished_list.map {|t| puts "character: #{t.name}, role: #{t.role}"}
+  finished_list.map {|t| puts "character: #{t.name}, #{"role:".rjust(10-t.name.length)} #{t.role}"}
 end
 
 def add_team_loop(player_choice, character, team_list_5)
   if player_choice == "y"
     team_list_5 << character
-    puts "You now have a full team!"
+    puts "You now have a full team!
+----------------------------------------------"
     team_makeup(team_list_5)
   end
 end
 
 def last_message
-  puts "Go kick some ass!"
+  puts "
+------------------------------------------------
+Go kick some ass!"
 end
 
 
